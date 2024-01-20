@@ -17,8 +17,6 @@ export const useUsers = () => {
 
     const currentOrder = order ? -1 : 1;
 
-    console.log({ sort, order, newUsers });
-
     switch (sort) {
       case SortBy.Name:
         newUsers.sort((a, b) => {
@@ -32,10 +30,6 @@ export const useUsers = () => {
 
       case SortBy.City:
         newUsers.sort((a, b) => {
-          console.log({
-            'a.address[sort]': a.address[sort],
-            'a.address': a.address,
-          });
           return (
             a.address[sort]
               .toLowerCase()

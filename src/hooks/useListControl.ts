@@ -24,7 +24,6 @@ export const useListControl = () => {
     const target = event.currentTarget as HTMLElement;
 
     const dataColValue = target.dataset.col;
-    console.log({ sort, order, filter });
 
     if (dataColValue) {
       if (sort === dataColValue && !order) {
