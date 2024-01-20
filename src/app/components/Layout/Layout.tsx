@@ -15,7 +15,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           user registry
         </Link>
 
-        <img src='/icon/plane.png' alt='logo' />
+        <img src={process.env.PUBLIC_URL + '/icon/plane.png'} alt='logo' />
       </header>
 
       <main className='layout__main'>{children}</main>
