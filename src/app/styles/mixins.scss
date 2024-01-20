@@ -1,0 +1,7 @@
+@mixin animation ($property, $delay: 1s) {
+  animation: $property $delay ease-in-out forwards;
+}
+
+@mixin transition ($property, $delay: 0.3s) {
+	transition: $property $delay ease-in;
+}

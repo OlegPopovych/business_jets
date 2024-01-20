@@ -1,0 +1,145 @@
+@import '../../styles/index.scss';
+
+thead, tbody { display: block; }
+
+.list {
+	max-height: 100%;
+	box-sizing: border-box;
+
+	&__filter1{
+		height: 48px;
+		margin-bottom: 10px;
+		width: 250px;
+		border: none;
+		border-bottom: 2px solid $color-dark-2;
+		outline: none;
+		padding-inline: 10px;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: $color-dark-2;
+		background-color: transparent;
+		@include transition(border-color);
+
+		&::placeholder {
+			font-family: 'Fira Sans', sans-serif;
+			font-size: 14px;
+			color: $color-dark-2;
+		}
+
+		&:focus,
+		&:active,
+		&:hover {
+			border-color: $color-blue;
+		}
+	}
+	&__filter{
+		height: 48px;
+		margin-bottom: 10px;
+		width: 250px;
+		border: 2px solid $color-blue;
+		outline: none;
+		padding-inline: 10px;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: $color-dark-2;
+		transition: border-color 0.3s ease-in;
+
+		&::placeholder {
+			font-family: 'Fira Sans', sans-serif;
+			font-size: 16px;
+			color: $color-dark-2;
+		}
+
+		&:focus,
+		:active {
+			border-color: $color-dark-3;
+		}
+	}
+
+	&__order-icon {
+		padding-left: 10px;
+	}
+
+	&__title {
+		@include default-h1;
+	}
+
+	&__table {
+		border-collapse: collapse;
+		width: 100%;
+		background-color: $color-dark-2;
+	}
+
+	&__table tbody {
+		width: 100%;
+	}
+
+	&__table tbody tr,
+	&__table thead tr {
+		width: 100%;
+		display: flex;
+	}
+
+	&__table tbody tr td {
+		font-size: 14px;
+		color: $color-white;
+	}
+
+	&__table tbody tr td:nth-child(1),
+	&__table thead tr th:nth-child(1) {
+		width: 30%;
+	}
+
+	&__table tbody tr td:nth-child(2),
+	&__table thead tr th:nth-child(2) {
+		width: 30%;
+	}
+
+	&__table tbody tr td:nth-child(3),
+	&__table thead tr th:nth-child(3) {
+		width: 20%;
+	}
+
+	&__table tbody tr td:nth-child(4),
+	&__table thead tr th:nth-child(4) {
+		width: 20%;
+	}
+
+	&__table thead th {
+		padding: 16px 14px;
+		text-align: left;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		color: $color-white;
+		@include transition(background-color)
+	}
+
+	&__table thead th[data-col="city"], 
+	&__table thead th[data-col="name"] {
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-hover-1;
+	}
+}
+
+	&__table td {
+		padding: 14px;
+	}
+
+	&__table tbody tr {
+		cursor: pointer;
+		@include transition(all, 0.1s);
+		color: $color-white;
+		background-color: $color-dark-3;
+	}
+
+	&__table tbody tr:nth-child(even) {
+		background-color: $color-dark-1;
+	}
+
+	&__table tbody tr:hover {
+		background-color: $color-hover-1;
+	}
+}

@@ -1,0 +1,13 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
+.userPage {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		@include default-h1;
+	}
+}

@@ -1,0 +1,24 @@
+@keyframes moveInLeftPlane {
+  0% {
+    opacity: 0;
+    left: -10%;
+  }
+  100% {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  60% {
+    transform: translateX(10wv);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

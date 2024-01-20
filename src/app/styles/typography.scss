@@ -1,0 +1,33 @@
+@import './colors.scss';
+
+html {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+@mixin typography(
+  $font-size,
+  $line-height,
+  $font-weight,
+  $text-tarnsform: none
+) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  text-transform: $text-tarnsform;
+}
+
+
+@mixin default-h1 {
+  @include typography(36px, 36px, 500);
+	padding-bottom: 20px;
+	margin: 0;
+	color: $color-dark-2;
+}
+
+@mixin default-h2 {
+  @include typography(30px, 30px, 500);
+}
+
+@mixin default-h4 {
+  @include typography(16px, 16px, 500);
+}

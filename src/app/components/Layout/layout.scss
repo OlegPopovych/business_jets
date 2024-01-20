@@ -1,0 +1,53 @@
+@import '../../styles/index.scss';
+
+.layout {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 70px auto 50px;
+
+	&__header {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding-inline: 20px;
+		background-color: $color-dark-3;
+	}
+
+	&__logo {
+		position: relative;
+		line-height: 70px;
+		height: 100%;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $color-white;
+		font-size: 26px;
+		@include animation(moveInLeft);
+		@include transition(color);
+
+		&:hover {
+			color: $color-blue;
+		}
+	}
+
+	&__header img {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		@include animation(moveInLeftPlane, 5s);
+	}
+
+	&__main {
+		padding: 20px;
+		background-color: $color-bg;
+	}
+
+	&__footer {
+		background-color: $color-dark-3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
