@@ -14,51 +14,51 @@ export const UserCard: React.FC<Props> = ({ user }) => {
         <li className='card__item'>
           <p>Username:</p>
 
-          <p data-cy="user-card-name">{user.username}</p>
+          <p data-cy="user-card-name">{user.username || 'no data'}</p>
         </li>
 
         <li>
           <p>Email:</p>
 
-          <p>{user.email}</p>
+          <p>{user.email || 'no data'}</p>
         </li>
 
         <li>
           <p>Address:</p>
 
           <p>
-            {`${user.address.suite}, ${user.address.street}, ${user.address.city}, ${user.address.zipcode}`}
+            {`${user.address.suite || ''}, ${user.address.street || ''}, ${user.address.city || ''}, ${user.address.zipcode || ''}`}
           </p>
         </li>
 
         <li>
           <p>Phone:</p>
 
-          <p>{user.phone}</p>
+          <p>{user.phone || 'no data'}</p>
         </li>
 
         <li>
           <p>Website:</p>
 
-          <p>{user.website}</p>
+          <p>{user.website || 'no data'}</p>
         </li>
 
         <li>
           <p>Company:</p>
 
-          <p>{user.company.name}</p>
+          <p>{user.company.name || 'no data'}</p>
         </li>
 
         <li>
           <p>Catchphrase:</p>
 
-          <p>{user.company.catchPhrase}</p>
+          <p>{user.company.catchPhrase || 'no data'}</p>
         </li>
 
         <li>
           <p>Business:</p>
 
-          <p>{user.company.bs}</p>
+          <p>{user.company.bs || 'no data'}</p>
         </li>
       </ul>
     </section>

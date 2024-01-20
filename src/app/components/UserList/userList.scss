@@ -6,7 +6,7 @@ thead, tbody { display: block; }
 	max-height: 100%;
 	box-sizing: border-box;
 
-	&__filter1{
+	&__filter{
 		height: 48px;
 		margin-bottom: 10px;
 		width: 250px;
@@ -19,6 +19,7 @@ thead, tbody { display: block; }
 		color: $color-dark-2;
 		background-color: transparent;
 		@include transition(border-color);
+		border-radius: 0;
 
 		&::placeholder {
 			font-family: 'Fira Sans', sans-serif;
@@ -30,29 +31,6 @@ thead, tbody { display: block; }
 		&:active,
 		&:hover {
 			border-color: $color-blue;
-		}
-	}
-	&__filter{
-		height: 48px;
-		margin-bottom: 10px;
-		width: 250px;
-		border: 2px solid $color-blue;
-		outline: none;
-		padding-inline: 10px;
-		box-sizing: border-box;
-		font-size: 16px;
-		color: $color-dark-2;
-		transition: border-color 0.3s ease-in;
-
-		&::placeholder {
-			font-family: 'Fira Sans', sans-serif;
-			font-size: 16px;
-			color: $color-dark-2;
-		}
-
-		&:focus,
-		:active {
-			border-color: $color-dark-3;
 		}
 	}
 
@@ -83,6 +61,7 @@ thead, tbody { display: block; }
 	&__table tbody tr td {
 		font-size: 14px;
 		color: $color-white;
+		overflow: hidden;
 	}
 
 	&__table tbody tr td:nth-child(1),
@@ -126,6 +105,10 @@ thead, tbody { display: block; }
 
 	&__table td {
 		padding: 14px;
+
+		@media (max-width: 600px) {
+			padding-inline: 5px;
+		}
 	}
 
 	&__table tbody tr {
@@ -141,5 +124,14 @@ thead, tbody { display: block; }
 
 	&__table tbody tr:hover {
 		background-color: $color-hover-1;
+	}
+}
+
+@media (max-width: 600px) {
+	.list {
+		&__table tbody tr td:nth-child(2),
+		&__table thead tr th:nth-child(2) {
+			display: none;
+		}
 	}
 }

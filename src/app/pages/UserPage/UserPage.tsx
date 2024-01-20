@@ -28,7 +28,7 @@ export const UserPage = () => {
 	}
 
   return (
-    <>
+    <div className='userPage'>
       <div className='userPage__header' data-cy="user-page">
         <h1 className='userPage__title'>User info</h1>
 
@@ -40,6 +40,6 @@ export const UserPage = () => {
       {user && <UserCard user={user} />}
 
 			{!user?.name && !user?.username && !isLoading && <h1 data-cy="user-page-no-data">No user data</h1>}
-    </>
+    </div>
   );
 };

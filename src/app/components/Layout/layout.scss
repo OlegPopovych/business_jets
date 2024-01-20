@@ -6,6 +6,10 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 70px auto 50px;
 
+	@media (max-width: 600px) {
+		grid-template-rows: 70px auto 75px;
+	}
+
 	&__header {
 		position: relative;
 		display: flex;
@@ -34,14 +38,22 @@
 		position: absolute;
 		height: 100%;
 		top: 0;
-		left: 50%;
 		transform: translateX(-50%);
-		@include animation(moveInLeftPlane, 5s);
+		left: 75%;
+		
+		@media (min-width: 600px) {
+			left: 50%;
+			@include animation(moveInLeftPlane, 5s);
+		}
 	}
 
 	&__main {
 		padding: 20px;
 		background-color: $color-bg;
+
+		@media (max-width: 600px) {
+			padding-inline: 0;
+		}
 	}
 
 	&__footer {

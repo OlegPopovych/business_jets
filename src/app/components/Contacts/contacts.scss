@@ -8,8 +8,14 @@
 		list-style: none;
 		display: flex;
 		justify-content: center;
-		gap: 30px;;
+		gap: 30px;
 		margin: 0;
+		padding: 0;
+
+		@media (max-width: 600px) {
+			flex-direction: column;
+			gap: 0;
+		}
 	}
 
 	&__list li a {
@@ -20,6 +26,10 @@
 		text-transform: uppercase;
 		color: $color-white;
 		position: relative;
+
+		@media (max-width: 600px) {
+			line-height: 25px;
+		}
 
 		&::after {
 			content: "";

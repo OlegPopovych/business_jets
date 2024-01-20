@@ -23,7 +23,7 @@ export const UserList: React.FC<UserListProps> = ({ users }) => {
         <input
           type='text'
           value={filter}
-          className='list__filter1'
+          className='list__filter'
           placeholder='Enter user name'
           onChange={hadndleFilterUsers}
           data-cy='list-input'
