@@ -1,5 +1,3 @@
-
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { RootState } from './store';
 import { User } from '../types/type';
